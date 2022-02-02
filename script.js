@@ -21,7 +21,7 @@ const config = {
       x: {
         title: {
           display: true,
-          text: 'Year'
+          text: '年份'
         },
         ticks: {
           callback: value => value
@@ -31,7 +31,7 @@ const config = {
         min: 0,
         title: {
           display: true,
-          text: 'Popularity(%)'
+          text: '热度(%)'
         },
         ticks: {
           callback: context => {
@@ -48,7 +48,10 @@ const config = {
       },
       title: {
         display: true,
-        text: 'Bangumi Tag Visualizer'
+        text: '班固米标签可视化',
+        font: {
+          size: 20
+        }
       },
       tooltip: {
         position: 'average',

@@ -16,18 +16,18 @@
         <canvas id="mainChart">Sorry, browser not supported!</canvas>
     </div>
     <div class="toolbar">
-        <label>Tag:</label>
+        <label>搜索标签:</label>
         <input id="input"></input>
-        <button id="add">Add</button>
-        <button id="remove">Remove</button>
-        <button onClick="showSetting()">Setting</button>
-        <button onClick="exportChart()">Export</button>
-        <button id="share" onClick="shareChart()" class="tooltip">Share
+        <button id="add">添加</button>
+        <button id="remove">删除</button>
+        <button onClick="showSetting()">设置</button>
+        <button onClick="exportChart()">导出图片</button>
+        <button id="share" onClick="shareChart()" class="tooltip">分享
             <span class="tooltiptext"></span>
         </button>
         <div class="setting">
             <div class="intervalcontainer">
-                <label>Interval:</label>
+                <label>区间:</label>
                 <select id="interval">
                     <option value="1" selected>1</option>
                     <option value="2">2</option>
@@ -42,7 +42,7 @@
                 <input value="1914" min="1914" max="2022" step="1" type="range" class="slider">
                 <input value="2022" min="1914" max="2022" step="1" type="range" class="slider">
             </div>
-            <button class="tagbind" onClick="toggleTagbind()">Tagbind: </button>
+            <button class="tagbind" onClick="toggleTagbind()">条目合并: </button>
         </div>
     </div>
 

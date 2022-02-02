@@ -1,2 +1,2 @@
 # bgmTags
-A visualization tool for user tags in bangumi.com.
+班固米用户标签可视化工具。\

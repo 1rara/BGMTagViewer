@@ -112,11 +112,10 @@ function shareChart() {
   const url = forgeURL();
   $(".tooltiptext").show().delay(1000).fadeOut(400);
   navigator.clipboard.writeText(url).then(function () {
-    console.log('Copying successful!');
-    $('.tooltiptext').text('Copying successful!');
+    $('.tooltiptext').text('分享链接已复制');
   }, function (err) {
-    console.error('Could not copy: ', err);
-    $('.tooltiptext').text('Could not copy: ', err);
+    console.error('无法复制: ', err);
+    $('.tooltiptext').text('无法复制: ', err);
   });
 }
 
