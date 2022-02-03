@@ -173,10 +173,10 @@ select{
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px;
     position: absolute;
-    margin-left: -40px;
-    margin-top: -80px;
+    margin-left: -50px;
+    margin-top: -70px;
     z-index: 10;
 }
 body {

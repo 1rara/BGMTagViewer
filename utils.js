@@ -87,7 +87,12 @@ window.onload = () => {
     }
   }
   // Initialize bind toggle
-  $(".tagbind").append(bind ? "ON":"OFF");
+  $(".tagbind").append(bind ? "ON" : "OFF");
+
+  $('#input').keypress(event => {
+    if (event.keyCode == 13 || event.which == 13)
+      $("#add").click();
+  });
 }
 
 //-----------------工具栏---------------------
@@ -98,13 +103,13 @@ function showSetting() {
 function exportChart() {
   var link = document.createElement('a');
   link.download = 'Chart.png';
-  c.resize(800,400);
+  c.resize(800, 400);
   link.href = c.toBase64Image();
   link.click();
   c.resize();
 }
 
-function forgeURL(){
+function forgeURL() {
   return window.location.origin + window.location.pathname + '?tags=' + encodeURIComponent(JSON.stringify(history)) + '&bind=' + bind;
 }
 
@@ -119,9 +124,9 @@ function shareChart() {
   });
 }
 
-function toggleTagbind(){
-  bind=!bind;
-  window.location.href=forgeURL();
+function toggleTagbind() {
+  bind = !bind;
+  window.location.href = forgeURL();
 }
 
 const getJSON = async url => {

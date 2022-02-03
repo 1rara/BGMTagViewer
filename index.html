@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
     <meta charset="utf-8" />
@@ -17,8 +17,8 @@
         <canvas id="mainChart">Sorry, browser not supported!</canvas>
     </div>
     <div class="toolbar">
-        <label>搜索标签:</label>
-        <input id="input"></input>
+        <label for="input">搜索标签:</label>
+        <input id="input" type="text"></input>
         <button id="add">添加</button>
         <button id="remove">删除</button>
         <button onClick="showSetting()">设置</button>
@@ -28,7 +28,7 @@
         </button>
         <div class="setting">
             <div class="intervalcontainer">
-                <label>区间:</label>
+                <label for="interval">区间:</label>
                 <select id="interval">
                     <option value="1" selected>1</option>
                     <option value="2">2</option>
