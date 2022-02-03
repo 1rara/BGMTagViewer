@@ -62,7 +62,7 @@ function bindName(arr, sName) {
   return target;
 }
 
-//-----------------onload相关---------------------
+//-----------------初始化---------------------
 function getVals() {
   var parent = this.parentNode;
   var slides = parent.getElementsByTagName("input");
@@ -98,7 +98,7 @@ function showSetting() {
 function exportChart() {
   var link = document.createElement('a');
   link.download = 'Chart.png';
-  c.resize(480, 320);
+  c.resize(800,400);
   link.href = c.toBase64Image();
   link.click();
   c.resize();

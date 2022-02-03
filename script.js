@@ -46,13 +46,6 @@ const config = {
       legend: {
         position: 'top'
       },
-      title: {
-        display: true,
-        text: '班固米标签可视化',
-        font: {
-          size: 20
-        }
-      },
       tooltip: {
         position: 'average',
         titleAlign: 'center',
