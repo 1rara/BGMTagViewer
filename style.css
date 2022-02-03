@@ -1,6 +1,6 @@
 button{
     box-sizing: border-box;
-    margin-left: 1vh;
+    margin-left: 0.5vh;
     text-transform: none;
     display: inline-block;
     font-weight: 400;
@@ -65,7 +65,7 @@ select{
     display: none;
     position: relative;
     text-align: center;
-    padding-top: 1.5vh;
+    padding-top: 1vh;
 }
 .intervalcontainer{
     position: relative;
@@ -75,10 +75,10 @@ select{
 .slidecontainer {
     position: relative;
     text-align: center;
-    width: 60%;
+    width: 40%;
     display: inline-grid;
 }
-.tagbind{
+.setting button{
     position: relative;
     display: inline-grid;
     bottom: -15px;
@@ -159,7 +159,7 @@ select{
     margin:0 auto;
 }
 .toolbar{
-    width:75vw;
+    width:90vw;
     height:10vh;
     padding-top: 1vh;
     padding-left: 5vh;

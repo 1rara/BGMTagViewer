@@ -129,6 +129,11 @@ function toggleTagbind() {
   window.location.href = forgeURL();
 }
 
+function toggleAnimation() {
+  c.options.animation = !c.options.animation;
+  $(".animation").text("动画: " + (c.options.animation ? "ON" : "OFF"))
+}
+
 const getJSON = async url => {
   const response = await fetch(url);
   return response.json();
