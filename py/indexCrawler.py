@@ -5,13 +5,13 @@ from scrapy.crawler import CrawlerProcess
 
 
 class Spider(scrapy.Spider):
-    name = 'bgm'
+    name='bgmIndexSpider'
     start_urls = [
         'http://mirror.bgm.rincat.ch/anime/browser',
     ]
 
     pageCnt = itertools.count(2)
-    #pageCnt = (i for i in range(283, 290))
+    #pageCnt = (i for i in range(285, 288))
 
     def parse(self, response):
         for subject in response.css('li.item'):
@@ -29,7 +29,7 @@ class Spider(scrapy.Spider):
 
 process = CrawlerProcess(settings={
     'FEEDS': {
-        '../data/scrapeIndex.json': {
+        './data/scrapeIndex.json': {
             'format': 'json',
             'overwrite': True,
         },

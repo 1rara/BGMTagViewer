@@ -131,4 +131,4 @@ data/person.jsonlines
 data/subject.json
 old/
 data/scrapeIndex.json
-py/log.txt
+*log.txt

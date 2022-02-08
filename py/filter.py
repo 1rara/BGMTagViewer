@@ -10,7 +10,7 @@ altRaw=SortedSet()
 alt=SortedSet()
 tags={}
 
-with jsonlines.open('../data/person.jsonlines') as jl:
+with jsonlines.open('./data/person.jsonlines') as jl:
     for line in jl:
         m=re.search('中文名= (.+?)\\r', line['infobox']) #简体中文名
         if m:
@@ -38,7 +38,7 @@ def bindTag(sName):
         return res
     return fName
 
-data = json.load(open('../data/subject.json', encoding='utf-8'))
+data = json.load(open('./data/subject.json', encoding='utf-8'))
 
 for i in data:
     s=i['year']
@@ -51,7 +51,7 @@ for i in data:
         else:
             tags[s][name]=t['count']
 
-with open("../data/tagsRaw.json", "w", encoding='utf-8') as outfile:
+with open("./data/tagsRaw.json", "w", encoding='utf-8') as outfile:
     json.dump(tags, outfile, ensure_ascii=False)
 tags={}
 
@@ -67,7 +67,7 @@ for i in data:
             tags[s][name]=t['count']
 print(len(alt))
 
-with open("../data/tags.json", "w", encoding='utf-8') as outfile:
+with open("./data/tags.json", "w", encoding='utf-8') as outfile:
     json.dump(tags, outfile, ensure_ascii=False)
-with open("../data/altNames.json", "w", encoding='utf-8') as outfile:
+with open("./data/altNames.json", "w", encoding='utf-8') as outfile:
     json.dump(list(alt), outfile, ensure_ascii=False)

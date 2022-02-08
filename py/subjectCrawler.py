@@ -1,16 +1,16 @@
 import scrapy
 import json
 import random
+import sys
 from scrapy.crawler import CrawlerProcess
 
 
 class Spider(scrapy.Spider):
-    name = 'bgm3'
-
+    name='bgmSubjectSpider'
     start_urls = []
     years = []
     data = {}
-    for i in json.load(open('../data/scrapeIndex.json')):
+    for i in json.load(open('./data/scrapeIndex.json')):
         data.update(i)
     print(len(data))
 
@@ -33,7 +33,7 @@ class Spider(scrapy.Spider):
 
 process = CrawlerProcess(settings={
     'FEEDS': {
-        '../data/subject.json': {
+        './data/subject.json': {
             'format': 'json',
             'overwrite': True,
         },
@@ -42,7 +42,7 @@ process = CrawlerProcess(settings={
     'DEFAULT_REQUEST_HEADERS': {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en',
-        'Authorization': 'Bearer 43051348633aefda11d427ba046339960f2e337a',
+        'Authorization': 'Bearer '+sys.argv[1],
     },
     'ROBOTSTXT_OBEY': False,
     'LOG_FILE': 'log.txt',
