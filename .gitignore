@@ -127,8 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+data/dump.zip
 data/person.jsonlines
 data/subject.json
+data/subject.jsonlines
+data/subject_cleaned.jsonlines
 old/
 data/scrapeIndex.json
 *log.txt
